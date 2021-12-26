@@ -2,27 +2,59 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant:wght@300&display=swap" rel="stylesheet">
     <title>En memoria de Luciano Rubio Palacio — Descanse En Paz</title>
     <style>
         body {
-            margin-top: 5em;
+            margin-top: 5rem;
+            font-family: 'Cormorant', serif;
+            color: #777;
         }
         h1#name {
             font-family: 'Cinzel', serif;
             text-align: center;
-            font-size: 3em;
+            font-size: 3rem;
             font-weight: 400;
+            margin-bottom: 0;
         }
         p#subtitle {
-            font-family: 'Cinzel', serif;
             text-align: center;
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+        .subtle {
+            color: #999;
+            font-size: 0.9rem;
+        }
+        div#content {
+        }
+        img.photo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            filter: drop-shadow(0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.5));
         }
     </style>
+    <script>
+    /**
+     * @returns Number of years since year 2000.
+     */
+    function yearsSince2000() {
+      return (new Date().getFullYear()) - 2000;
+    }
+    </script>
 </head>
 <body>
     <h1 id="name">Luciano Rubio Palacio</h1>
-    <p id="subtitle">1952 — 2000</p>
+    <p id="subtitle">1952 — 2000 <span class="subtle">(hace <span id="yearsSince2000"></span> años)</span></p>
+    <div id="content">
+      <img class="photo" src="https://lh3.googleusercontent.com/o04k1zol1hfqvGkC-u-5DYqyseaXhSQDeOgnTsLROU-S0qn7Fj2UKYZrGAgPfFoT_cX3xKF_gE2VHTCmGkmrSmCL7xt4LembMzFlDMMpQKKROUQRYXeQ71vuYYBGiV-H55Xn2fCVMDXBVDvXmuHdNlWkqEKv1zXE_ItFEUDKJSFvZ2N9Wj8eaVkBTNrsL36T1wlegI_67IIZ6plome8uFlYANP9hX08UmCe0CiyzIvdJvdeL-_BvUnld_H6jFeoDHsafeFP_TrTafcDQpi77a0FbvOYxW4GlNRlHYn2lHM4F0i_Ne1ooaF4nEiEBX1zCWWCiD3OnYe6A4RIVQMmx4-rBRoVcw55xIhj4ZluNYa2Z6GtWvaE52M7ihghHD1gXAt2xDr-eT_b3pqhluKu-5JJlZxV1OA0tarH5PJaHuPNtsdL68MD_fNPoHHqlTuDMKbD_mA_AwplmyZXBgQXq8MyS0JQwqZh7ISiTGXX8y39eKpm_JtYPBP5-ttdjlHcx2mrnILwHOz58NgYdNd6Id-_Ane5K6BiMlfDF1qQTXWnqIpN-5Rn_nhC7C3yyJC8F4QMpTfwmLsPIVS1URhGaiczSllkz5dB8pVKJN-Yj_ywzK6DLHUNiD4Hf8mgOwe3YR-WiLS3yBIOew3NfZCTC4vY5rIwRs9_L-Pg-5otEObDflh7Oq086gaeuXYt1ZHzU_qdno2OsmKOus4pAwgwaxrim=w1716-h1145-no?authuser=0"/>
+    </div>
 </body>
-
+<script>
+(() => {
+  document.querySelector("#yearsSince2000").textContent = yearsSince2000()
+})();
+</script>
 </html>
