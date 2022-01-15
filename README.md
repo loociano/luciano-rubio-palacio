@@ -1,3 +1,3 @@
 # Luciano Rubio Palacio Memorial Site
 
-WIP.
+https://lucianorubiopalacio.rip
